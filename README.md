@@ -13,7 +13,8 @@ Start with Portfolio this links to all other projects.
 <h2> What I learned </h2>
 TODO
 
-
+<h2> Problems faced </h2>
+TODO
 
 
 All requirements are described in freeCodeCamp
