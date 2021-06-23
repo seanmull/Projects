@@ -10,5 +10,10 @@ Download and open html/css documents in browser.
 
 Start with Portfolio this links to all other projects.
 
+<h2> What I learned </h2>
+TODO
+
+
+
 
 All requirements are described in freeCodeCamp
