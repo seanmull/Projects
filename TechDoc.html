@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="TechDoc.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+</head>
+<body>  
+    <nav id="navbar" class="navbar">
+        <header>Web Applicaton Architecture</header>
+        <a href="#DNS" class="nav-link">DNS</a>
+        <a href="#Load_Balancer" class="nav-link">Load Balancer</a>
+        <a href="#Web_Application_Servers" class="nav-link">Web Application Servers</a>
+        <a href="#Database" class="nav-link">Database</a>
+        <a href="#Caching_Service" class="nav-link">Caching Service</a>
+        <a href="#Job_Servers" class="nav-link">Job Servers</a>
+        <a href="#Full_Text_Search_Service" class="nav-link">Full Text Search Service</a>
+        <a href="#Services" class="nav-link">Services</a>
+        <a href="#Data" class="nav-link">Data</a>
+        <a href="#Cloud_Storage" class="nav-link">Cloud Storage</a>
+        <a href="#CDN" class="nav-link">CDN</a>
+    </nav>
+    <div class="container">
+        <main id="main-doc">
+            <h1>Web Applicaton Architecture</h1>
+            <img src="https://miro.medium.com/max/665/1*K6M-x-6e39jMq_c-2xqZIQ.png" alt="" class="img-fluid rounded mx-auto d-block">
+            <p>The above diagram is a fairly good representation of web architecture. If you’re not an experienced web developer, you’ll likely find it complicated. The walk through below should make it more approachable before we dive into the details of each component.</p>
+            <section class="main-section" id="DNS">
+                <header>DNS</header> 
+                <ol>
+                    <li>DNS</li>
+                    <li>Load Balancer</li>
+                    <li>Web Application Servers</li>
+                    <li>Database</li>
+                    <li>Caching Service</li>
+                    <li>Job Servers</li>
+                    <li>Full Text Search Service</li>
+                    <li>Services</li>
+                    <li>Data</li>
+                    <li>Cloud Storage</li>
+                    <li>CDN</li>
+                </ol>
+                <p>DNS stands for “Domain Name System” and it’s a backbone technology that makes the world wide web possible. At the most basic level DNS provides a key/value lookup from a domain name (e.g., google.com) to an IP address (e.g., 85.129.83.120), which is required in order for your computer to route a request to the appropriate server. Analogizing to phone numbers, the difference between a domain name and IP address is the difference between “call John Doe” and “call 201-867–5309.” Just like you needed a phone book to look up John’s number in the old days, you need DNS to look up the IP address for a domain. So you can think of DNS as the phone book for the internet.</p>
+                <p>You can look up the DNS servers you are using right now just type the following into the command prompt:</p>
+                <div id="code_block">
+                    <code>
+                        C:\Users\SeansPC>ipconfig\all
+                    </code>
+                </div>
+                <p>You might get the following response:</p>
+                <div id="code_block">
+                    <code>DNS Servers . . . . . . . . . . . : 2001:578:3f::30</code>
+                    <br>
+                    <code>......</code>
+                    <br>
+                    <code>2001:578:3f:1::30</code>
+                    <br>
+                    <code>68.105.28.11</code>
+                    <br>
+                    <code>68.105.29.11</code>
+                    <br>
+                    <code>68.105.28.12</code>
+                </div>
+                
+            </section>
+            <section class="main-section" id="Load_Balancer">
+                <header>Load Balancer</header>
+                <p>Before diving into details on load balancing, we need to take a step back to discuss horizontal vs. vertical application scaling. What are they and what’s the difference? Horizontal scaling means that you scale by adding more machines into your pool of resources whereas “vertical” scaling means that you scale by adding more power (e.g., CPU, RAM) to an existing machine.</p>
+                <p>In web development, you (almost) always want to scale horizontally because, to keep it simple, stuff breaks. Servers crash randomly. Networks degrade. Entire data centers occasionally go offline. Having more than one server allows you to plan for outages so that your application continues running. In other words, your app is “fault tolerant.” Secondly, horizontal scaling allows you to minimally couple different parts of your application backend (web server, database, service X, etc.) by having each of them run on different servers. Lastly, you may reach a scale where it’s not possible to vertically scale any more. There is no computer in the world big enough to do all your app’s computations. Think Google’s search platform as a quintessential example though this applies to companies at much smaller scales.  It would be challenging to provide that entire compute power via vertical scaling.</p>
+            </section>
+            <section class="main-section" id="Web_Application_Servers">
+                <header>Web Application Servers</header>
+                <p>At a high level web application servers are relatively simple to describe. They execute the core business logic that handles a user’s request and sends back HTML to the user’s browser. To do their job, they typically communicate with a variety of backend infrastructure such as databases, caching layers, job queues, search services, other microservices, data/logging queues, and more. As mentioned above, you typically have at least two and often times many more, plugged into a load balancer in order to process user requests</p>
+                <p>You should know that app server implementations require choosing a specific language (Node.js, Ruby, PHP, Scala, Java, C# .NET, etc.) and a web MVC framework for that language (Express for Node.js, Ruby on Rails, Play for Scala, Laravel for PHP, etc.). However, diving into the details of these languages and frameworks is beyond the scope of this article.</p>
+            </section>
+            <section class="main-section" id="Database">
+                <header>Database</header>
+                <p>Every modern web application leverages one or more databases to store information. Databases provide ways of defining your data structures, inserting new data, finding existing data, updating or deleting existing data, performing computations across the data, and more. In most cases the web app servers talk directly to one, as will the job servers. Additionally, each backend service may have it’s own database that’s isolated from the rest of the application.</p>
+            </section>
+            <section class="main-section" id="Caching_Service">
+                <header>Caching Service</header>
+                <p>A caching service provides a simple key/value data store that makes it possible to save and lookup information in close to O(1) time. Applications typically leverage caching services to save the results of expensive computations so that it’s possible to retrieve the results from the cache instead of recomputing them the next time they’re needed. An application might cache results from a database query, calls to external services, HTML for a given URL, and many more.</p>
+            </section>
+            <section class="main-section" id="Job_Servers">
+                <header>Job Servers</header>
+                <p>Most web applications need to do some work asynchronously behind the scenes that’s not directly associated with responding to a user’s request. For instance, Google needs to crawl and index the entire internet in order to return search results. It does not do this every time you search. Instead, it crawls the web asynchronously, updating the search indexes along the way.</p>
+                <p>While there are different architectures that enable asynchronous work to be done, the most ubiquitous is what I’ll call the “job queue” architecture. It consists of two components: a queue of “jobs” that need to be run and one or more job servers (often called “workers”) that run the jobs in the queue.</p>
+            </section>
+            <section class="main-section" id="Full_Text_Search_Service">
+                <header>Full Text Search Service</header>
+                <p>Many if not most web apps support some sort of search feature where a user provides a text input (often called a “query”) and the app returns the most “relevant” results. The technology powering this functionality is typically referred to as “full-text search”, which leverages an inverted index to quickly look up documents that contain the query keywords.</p>
+            </section>
+            <section class="main-section" id="Services">
+                <header>Services</header>
+                <p>Once an app reaches a certain scale, there will likely be certain “services” that are carved out to run as separate applications. They’re not exposed to the external world but the app and other services interact with them</p>
+            </section>
+            <section class="main-section" id="Data">
+                <header>Data</header>
+                <p>Today, companies live and die based on how well they harness data. Almost every app these days, once it reaches a certain scale, leverages a data pipeline to ensure that data can be collected, stored, and analyzed.</p>
+            </section>
+            <section class="main-section" id="Cloud_Storage">
+                <header>Cloud Storage</header>
+                <p>“Cloud storage is a simple and scalable way to store, access, and share data over the Internet” according to AWS. You can use it to store and access more or less anything you’d store on a local file system with the benefits of being able to interact with it via a RESTful API over HTTP. Amazon’s S3 offering is by far the most popular cloud storage available today.</p>
+            </section>
+            <section class="main-section" id="CDN">
+                <header>CDN</header>
+                <p>CDN stands for “Content Delivery Network” and the technology provides a way of serving assets such as static HTML, CSS, Javascript, and images over the web much faster than serving them from a single origin server. It works by distributing the content across many “edge” servers around the world so that users end up downloading assets from the “edge” servers instead of the origin server. For instance in the image below, a user in Spain requests a web page from a site with origin servers in NYC, but the static assets for the page are loaded from a CDN “edge” server in England, preventing many slow cross-Atlantic HTTP requests.</p>
+            </section>
+            <p>Source of this info can be found <a href="https://tigosoftware.com/web-architecture-101">here.</a></p>
+        </main>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Landing Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="ProductLanding.css">
+</head>
+
+<body>
+    <header id="header">
+        <nav id="nav-bar" class="navbar navbar-expand-sm navbar-dark bg-primary fixed-top">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8t9X1Egq7lf-J4YXbR2wsLfpGvNf1aQ4nS6zQqQjY2J6kEyvXxp2b_o806Yqbdih8xho&usqp=CAU" alt="" id="header-img">
+            <a class="navbar-brand" href="#">Cloudinfo</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#expandme">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="expandme">
+                <div class="navbar-nav">
+                    <a href="#Learn" class="nav-link">Learn</a>
+                    <a href="#Pick" class="nav-link">Pick</a>
+                    <a href="#Signup" class="nav-link">Signup!</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    
+    <div class="container">
+        <h1>Cloud Storage Options</h1>
+    <h2 id="Learn">Learn about benefits</h2>
+    <p id="description">It’s 2020, and now cloud storage has become one of the most convenient and efficient methods to store data online. There are many storage service providers on the internet, and this area is so vast now every big tech company owns a separate storage facility, which helps to generate a significant margin of revenue from the users. In cloud storing, the user, rather than saving the data at local storage or hard disk, stores data somewhere at the remote location, which can be accessed using internet service. There are various cloud storage service providers who sell storage services for different ranges.</p>
+    <blockquote>
+        https://cloudacademy.com/blog/10-benefits-of-using-cloud-storage/
+    </blockquote>
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe id="video" class="embed-responsive-item" src="https://www.youtube.com/embed/iyCKzM0Zm00" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <h2 id="Pick">Pick which options suits your needs</h2>
+    <div class="container" id="pricing-containter">
+        <div class="pricing-div">
+            <img src="icons/icon1.png" alt="" class="pricing-img">
+            <h3>100 GB</h3>
+            <p>$1.99 / month</p>
+        </div>
+        <div class="pricing-div">
+            <img src="icons/icon2.png" alt="" class="pricing-img">
+            <h3>200 GB</h3>
+            <p>$2.99 / month</p>
+        </div>
+        <div class="pricing-div">
+            <img src="icons/icon3.png" alt="" class="pricing-img">
+            <h3>500 GB</h3>
+            <p>$5.99 / month</p>
+        </div>
+    </div>
+    <h2 id="Signup">Sign up to get storing</h2>
+    <form action="https://www.freecodecamp.com/email-submit" id="form">
+        <label for="email"></label>
+        <input type="email" id="email" placeholder="Enter your e-mail" name="email" required>
+        <input type="submit" id="submit" value="Send">
+    </form>
+    </div>
+
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+</html>

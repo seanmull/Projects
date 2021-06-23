@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smiling Faces DayCare Application</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="SurveyForm.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="title">Smiling Faces DayCare Application</h1>
+        <p id="description">Several opening available. Apply now!</p>
+        <form action="" id="survey-form">
+            <p>
+                <label for="name" id="name-label">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" class="form-control" required>
+            </p>
+            <p>
+                <label for="email" id="email-label">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" class="form-control"
+                    required>
+            </p>
+            <p>
+                <label for="number" id="number-label" class="number">Enter your age</label>
+                <input type="number" id="number" name="number" placeholder="Please enter your age" type min=2
+                    max=106 class="form-control">
+            </p>
+            <p>
+                <label for="edu" id="edu">Level of Education</label>
+                <select name="edu" id="dropdown" class="form-control">
+                    <option value="highsc">High School only</option>
+                    <option value="bac">Bachelor's Degree</option>
+                    <option value="mas">Master's Degree</option>
+                    <option value="doc">PhD</option>
+                </select>
+            </p>
+            <h2>Experience Teaching</h2>
+            <ul>
+                <li>
+                    <input type="radio" name="exp" id="none" value="none" class="form-check-input">
+                    <label for="none">None</label>
+                </li>
+                <li>
+                    <input type="radio" name="exp" id="1y" value="1y" class="form-check-input">
+                    <label for="1y">1 year</label>
+                </li>
+                <li>
+                    <input type="radio" name="exp" id="2-5y" value="2-5y" class="form-check-input">
+                    <label for="2-5y">2-5 years</label>
+                </li>
+                <li>
+                    <input type="radio" name="exp" id="5+y" value="5+y" class="form-check-input">
+                    <label for="5+y">5+ years</label>
+                </li>
+            </ul>
+            <h2>Age of children taught (if applicable)</h2>
+            <ul>
+                <li>
+                    <input type="checkbox" id="n/a" value="n/a" class="form-check-input">
+                    <label for="n/a">N/A</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="new" value="new" class="form-check-input">
+                    <label for="new">Newborn (0-2mo)</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="inf" value="inf" class="form-check-input">
+                    <label for="inf">Infant (2m-1yr)</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="tod" value="tod" class="form-check-input">
+                    <label for="tod">Toddler (1yr-4yr)</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="child" value="child" class="form-check-input">
+                    <label for="child">Child (4yr+)</label>
+                </li>
+            </ul>
+            <p>
+                <label for="comments">Additional Questions</label>
+                <textarea name="" id="comment" cols="30" rows="10" class="form-control"></textarea>
+            </p>
+            <div class="d-grid gap-2">
+                <button type="submit" id="submit" class="btn btn-outline-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+
+</html>

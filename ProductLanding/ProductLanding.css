@@ -1,0 +1,39 @@
+/* User Story #14: My product landing page should have at least one media query. */
+/* User Story #15: My product landing page should utilize CSS flexbox at least once. */
+
+body{
+    padding-top:4rem;
+    text-align: center;
+}
+
+#description{
+    text-align:left;
+}
+
+#pricing-containter{
+    display:flex;
+    justify-content: center;
+}
+
+@media(max-width:1200px){
+    #pricing-containter{
+        flex-direction: column;
+    }
+}
+
+#header-img{
+    width: 40px;
+    height: 30px;
+    border-radius: 20%;
+}
+
+a{
+    padding-left: 1rem;
+}
+
+.pricing-div{
+    margin: 2rem;
+    border-radius: 5%;
+}
+
+

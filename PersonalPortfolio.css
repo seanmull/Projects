@@ -1,0 +1,55 @@
+/* User Story #9: My portfolio should have at least one media query. */
+/* User Story #10: The height of the welcome section should be equal to the height of the viewport.User Story #10: The height of the welcome section should be equal to the height of the viewport. */
+
+#navbar, .btn{
+    background-color: #006d77;
+}
+
+.btn{
+    color:white;
+}
+
+h1{
+    padding-top: 4rem; 
+}
+
+#welcome-section{
+    height: 395px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #edf6f9;
+}
+
+h2{
+    text-align: center;
+    background-color: #83c5be;
+    margin-bottom: 0;
+    padding-top: 1rem;
+}
+
+#projects{
+    background-color: #83c5be;
+    display: flex;
+    justify-content: center;
+
+
+
+}
+
+#cards{
+    max-width: 900px;
+}
+
+#footer{
+    background-color: #006d77;
+    text-align: center;
+    color:white;
+    padding-bottom: 100px;
+    padding-top: 100px;
+
+}
+
+
+
+

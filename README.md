@@ -1,9 +1,3 @@
-# Projects
+# freeCodeCampProject
 
-freeCodeProjects include
-
-Tribute page
-Survey Form
-Product Landing
-Technical Page
-Portfolio
+This repo will store all of the freeCodeCamp projects

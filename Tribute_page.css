@@ -1,0 +1,40 @@
+body{
+    font-size: 1.15rem;
+    margin-top: 0.5rem;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #caf0f8;
+    color: #03045e; 
+    
+}
+
+.main-block{
+    text-align: center;
+    background-color: #00b4d8;
+    border-radius: 3%;
+}
+
+footer, .img-div {
+    padding-bottom: 1rem;
+}
+
+h1{
+    padding-top: 1rem;
+}
+
+#main{
+    max-width: 900px;
+    padding: 0 1rem 0 1rem;
+}
+
+.tribute-info{
+    padding: 1rem 2rem 1rem 2rem;
+    margin: 0.5rem;
+}
+
+#main-photo{
+    width: 90%;
+    padding-bottom: 0.5rem;
+    border-radius: 20px;
+}
+
+
