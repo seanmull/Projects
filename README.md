@@ -11,7 +11,7 @@ Start with [Portfolio](https://codepen.io/sean_mull/full/BaWedXx) this links to 
 <h2> What I learned </h2>
 
 * Seperate HTML/CSS to allow seperation of concerns between style and content
-* Bootstrap is powerful in provided quick prototyping
+* Bootstrap is powerful in providing quick prototyping
 * Creating styles that really look good takes time and patience but it has a huge impact on UE.
 * Understand how content can routed via appending to URLS
 
