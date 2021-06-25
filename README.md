@@ -21,7 +21,7 @@ Start with [Portfolio](https://codepen.io/sean_mull/full/BaWedXx) this links to 
 <h2> Problems faced </h2>
 
 * Dealing with conflicts between different CSS setting.
-* Dealing with conflicts between bootstrap and CSS (we loose some seperation on concerns).
+* Dealing with conflicts between bootstrap and CSS (we lose some seperation on concerns).
 * Margins/Padding/Borders ie understanding the CSS box.
 * Flexbox terminolgy.
 
